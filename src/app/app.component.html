@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<section id="login">
+    <div class="container">
+        <div class="row">
+           
+                <form role="form" autocomplete="off">
+                        <div class="form-group">
+                          
+                  <label for = "firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName "class="form-control" [(ngModel)]="firstName" #first >
+                        </div>
+                    <div class="form-group">
+                        
+                    <label for = "lastName">Last Name:</label>
+                    <input type="text"  id="lastName" name="lastName" [(ngModel)]="lastName" #last>
+                    </div>
+                    <div class="form-group">
+                    <input type="submit" id="btn-login" class="btn btn-primary btn-lg btn-block" (click)=login(first.value,last.value)  [title]=title>
+                    <br>
+                    <app-app-title [titled]="title"></app-app-title>
+                </div>
+                </form>
+            
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
